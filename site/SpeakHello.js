@@ -9,7 +9,7 @@
 var helloSpeaker ={};
 
 // DO NOT attach the speakWord variable to the 'helloSpeaker' object.
-helloSpeaker.speakWord = "Hello";
+var speakWord = "Hello";
 
 // STEP 4: Rewrite the 'speak' function such that it is attached to the
 // helloSpeaker object instead of being a standalone function.
@@ -17,9 +17,9 @@ helloSpeaker.speakWord = "Hello";
 helloSpeaker.speak=function (){
   
 
-  console.log(speakWord + " " + helloSpeaker.speakWord);
+  console.log(speakWord + " " + helloSpeaker.name);
 }
-window.helloSpeaker = helloSpeaker;
+window.helloSpeaker = helloSpeaker.speak();
 
 // STEP 5: Expose the 'helloSpeaker' object to the global scope. Name it
 // 'helloSpeaker' on the global scope as well.
